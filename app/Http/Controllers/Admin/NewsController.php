@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\News;
 class NewsController extends Controller
 {
     //
@@ -16,7 +16,6 @@ view('admin.news.create');
     
 public function create(Request $request)
   {
-
       // Varidationをおこなう
       $this->validate($request, News::$rules);
 
