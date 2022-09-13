@@ -82,8 +82,8 @@ public function create(Request $request)
       $profile->fill($profile_form)->save();
       
       // 以下を追記
-      $prohistory = new History();
-      $prohistory->news_id = $news->id;
+      $prohistory = new Prohistory();
+      $prohistory->profile_id = $profile->id;
       $prohistory->edited_at = Carbon::now();
       $prohistory->save();
       
